@@ -1,4 +1,4 @@
-import { peakRightInVariants, staggerChildernVariants } from "@/utils/motion";
+import { peekInVariants, staggerChildernVariants } from "@/utils/motion";
 import { motion } from "framer-motion";
 import React from "react";
 
@@ -14,9 +14,9 @@ export function PeakRightIn({
   delay = 0,
 }: PeakRightInProps) {
   return (
-    <motion.div variants={staggerChildernVariants}>
+    <motion.div variants={staggerChildernVariants(delay)}>
       <motion.p
-        variants={peakRightInVariants(delay)}
+        variants={peekInVariants(delay)}
         className={textStyles}
         initial="hidden"
         animate="animate"
